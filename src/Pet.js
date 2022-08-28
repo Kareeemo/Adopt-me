@@ -2,14 +2,13 @@ import { Link } from "react-router-dom";
 
 const Pet = (props) => {
   const { name, animal, breed, images, location, id } = props;
-  console.log(props)
   let hero = "https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Dog-512.png";
   if (images.length) {
     hero = images[0];
   }
 
   return (
-    <Link href={`/details/${id}`} className="pet">
+    <Link to={`/details/${id}`} className="pet">
       <div className="image-container">
         <img src={hero} alt={name} />
       </div>
